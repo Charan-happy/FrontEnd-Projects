@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>automatic image slider</title>
+    <link rel="stylesheet"href="style.css">
+    <!--adding fonts from google api-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@400;500&display=swap">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+</head><!--adding icons-->
+<body>
+    <!--wrapper-->
+    <div class="wrapper">
+        <!--images area-->
+        <div class="images-area">
+            <!--alt attribute is used when we wanted to display alternative to it-->
+            <img src="assets\images\welcome gesture.jpg" alt="image"class="firstimage">
+            <img src="assets\images\Road journey.jpg"alt="image">
+            <img src="assets\images\nature.jpg"alt="img">
+            <img src="assets\images\teenpose.jpg"alt="img">
+            <img src="assets\images\inpired boy.jpg"alt="img">
+        </div>
+        <!--button area-->
+        <div class="buttons-area">
+            <div class="previous-btn">
+                <!--i tag defines a part of text in an alternate voice or mood displayed in italic-->
+                <i class="bx bx-chevron-left"></i>
+            </div>
+            <div class="next-btn">
+                <i class="bx bx-chevron-right"></i>
+            </div>
+        </div>
+        <!--pagination area-->
+        <div class="pagination-area"></div>
+    </div>
+    <!--end wrapper-->
+    <script src="app.js"></script>
+</body>
+</html>

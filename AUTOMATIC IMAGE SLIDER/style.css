@@ -1,0 +1,18 @@
+/* main rules*/
+:root{
+    --white-c: #fff;
+    ---black-c: #000;
+    --body-background-c: #fd7ac0;
+    --wrapper-background-c: rgba(0,0,0,0.219);
+    --wrapper-shadow-c: rgba(255,255,255,0.219);
+    --buttons-background-c: rgba(255,255,255,0.219);
+    --buttons-background-c: rgba(135,207,235,0.493);
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    font
+}
