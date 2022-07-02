@@ -64,3 +64,54 @@ body{
     border-radius:0 5px 5px 0;
     margin-left: -100px;
 }
+.buttons-area>div:last-child{
+    border-radius: 5px 0 0 5px;
+    margin-right: -100px;
+}
+/*show the buttons*/
+.wrapper:hover .buttons-area>div:first-child{
+    margin-left: 0;
+}
+.wrapper:hover .buttons-area>div:last-child{
+    margin-right: 0;
+}
+.buttons-area div:hover:not(div.disabled){
+    background-color: var(--buttons-active-background-c);
+}
+.buttons-area div:not(div.disabled):active{
+    opacity:0.7;
+}
+/*disabled button*/
+.buttons-area>div.disabled{
+    cursor:no-drop;
+    opacity: 0.3;
+}
+.buttons-area  div i{
+    font-size: 70px;
+}
+/*pagination area*/
+.pagination-area{
+    position:absolute;
+    top:90%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    pointer-events: none;
+}
+/*pagination spans*/
+.pagination-area span{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--white-c);
+    margin-right: 5px;
+    transform:scale(0.5);
+    transition: 0.3s ease-in-out;
+    opacity:0.4;
+}
+/*current active span*/
+.pagination-area span.active{
+    transform: scale(1);
+    opacity: 1;
+}
+/*end wrapper*/
