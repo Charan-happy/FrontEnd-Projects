@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formvalidationusingjavascript</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+            outline:none;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            background: #187cd3;
+        }
+        .wrapper{
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%S);
+            max-width: 350px;
+            width: 100%;
+            background:#576876;
+            padding:23px;
+            border-radius: 5px;
+            box-shadow: 4px 4px 2px rgb(169, 215, 29)
+        }
+        .wrapper h2{
+            text-align: center;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color:aqua;
+        }
+        .wrapper input-field{
+            margin-bottom: 10px;
+        }
+        .wrapper input-field input[type="text"],
+        .wrapper textarea{
+            border:1px solid rgb(47, 16, 221);
+            width:100%;
+            padding: 10px;
+        }
+        .wrapper textarea{
+            resize: none;
+            height: 80px;
+        }
+        .wrapper .btn input[type="submit"]{
+            border:0px;
+            margin-top: 15px;
+            padding:10px;
+            text-align: center;
+            width:100%;
+            background:#0c4574;
+            color:bisque;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            font-weight: bold;
+            border-radius: 25px;
+            cursor:pointer;
+        }
+        #error_message{
+            margin-bottom: 20px;
+            background: #e41a0c;
+            padding: 0px;
+            text-align: center;
+            font-size: 14px;
+            transition: all 0.5s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <h2>contact us</h2>
+        <div id="error message">
+
+        </div>
+        <form action=""id="myform"onsubmit= "return validation();">
+            <div class="input-field">
+                <input type="text"placeholder="Name"id="name">
+            </div>
+            <div class="input-field">
+                <input type="text"placeholder="subject"id="subject">
+            </div>
+            <div class="input-field">
+                <input type="text"placeholder="Phone"id="phone">
+            </div>
+            <div class="input-field">
+                <input type="text"placeholder="Email"id="email">
+            </div>
+            <div class="input-field">
+            <textarea placeholder="Message"id="message"></textarea></div>
+            <div class="btn">
+                <input type="submit"id="button"></div>
+            </div>
+        </form>
+
+    </div>
+    <script>
+        function validate(){
+            var name=document.getElementById("name").value;
+            var subject=document.getElementById("subject").value;
+            var phone=document.getElementById("phone").value;
+            var email=documet.getElementById("email").value;
+            var message=document.getElementById("message").value;
+            var error_message=document.getElementById("error_message");
+        
+            error_message.style.padding="10px";
+            var text:
+                if (name.length<5){
+                    text="please enter the value";
+                    error_message.innerHTML=text;
+                    return false;
+            }
+                if(subject.length<10){
+                    text="please enter correct subject";
+                    error_message.innerHTML=text;
+                    return false;
+                }
+                if(isNaN(phone)||phone.length!=10){
+                    text="please enter the phone number"
+                    error_message.innerHTML=text;
+                    return false;
+                }
+                if(email.indexof("@")=-1 || email.length<6){
+                    text="please enter valid email";
+                    error_message.innerHTML=text;
+                    return false;
+                }
+                if(message.length<140){
+                    text="please enter more than 140 characters";
+                    error_message.innerHTML=text;
+                    return false;
+                }
+                alert("form submitted successfully");
+                return true;
+        }
+    </script>
+     
+</body>
+
+</html>
