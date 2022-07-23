@@ -5,20 +5,69 @@
     <title>signup/login form </title>
 <meta charset="utf-8">
     <style>
-      *{
-        padding:0px;
-        margin:0px;
+        form{
+            display:box;
+            justify-items: center;
+            text-align: center;
+            border-color: blue;
+            height:50px;
+            margin:50px;
+            padding: none;
+        }
+        #signup{
+            background-color: aquamarine;
+            text-align: center;
+            width: 160px;
+            height: 25px;
+            border-color: aquamarine;
+        }
+        #login{
+            background-color: grey;
+            text-align: center;
+            height: 25px;
+            width: 170px;
+            border-top: grey;
+            border-left: grey;
+        }
+      body{
+        background-color: grey;
+      } 
+      .header{
+        display: block;
+        background-color: #ffff;
+        text-align: none;
+      }
+      h1{
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color:white;
+      }
+      button{
+        background-color: rgb(20, 149, 106);
+        text-align: center;
+        text-transform: uppercase;
+        width: 250px;
+        height:30px;
+        border-color: rgb(14, 179, 124);
+        letter-spacing: 4px;
+        color:white;
+        text-decoration: bold;
+      }
+      button:hover{
+        background-color: aqua;
+        color:rgb(202, 20, 90);
       }
     </style>
     <body>
       <form>
-      <div class="header">
-        signup <span>login
-        </div>
+      
+       <input type="text" id="signup"value="Sign Up"/><input type="text"id="login" value="login"/>
         <h1>Sign up for Free</h1>
           <input type="text" placeholder="First Name*" id="firstname" required/><span><input type="text" placeholder="LastName*" id="lastname"/><br/>
-        <input type="email" placeholder="Email Address*" id="emailid" required/><br/>
-        <input type="password" placeholder="Set A Password*"required><br/>
-        <button value="get started" id="getstarted">
+        <br/><input type="email" placeholder="Email Address*" id="emailid" required/><br/>
+        <br/><input type="password" placeholder="Set A Password*"required><br/>
+        <br/><button value="get started" id="getstarted">get started
         </body>
         </html>
